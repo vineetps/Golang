@@ -6,5 +6,4 @@ def index(response):
     return HttpResponse("<em>Hello World!</em>")
 
 def home(response):
-    print('hello world')
     return HttpResponse("Welcome Home!")
