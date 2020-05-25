@@ -11,8 +11,8 @@
             <h1>Share Bazaar</h1>
             <a href="http://localhost:8000/">Home</a> <br><br>
             <form action="" method="post">
+                {{ form.as_p }}
                 {% csrf_token %}
-                {{ form }}
                 <input type="submit" value="Submit"/>
               </form>
         </div>
