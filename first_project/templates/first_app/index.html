@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8" >
+        <title>Share Bazaar</title>
+        <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+    </head>
+    <body>
+        <h1>Share Bazaar</h1>
+        <a href="http://localhost:8000/form/">Form to submit new share</a>
+        <br><br>
+        <div class "django">
+            {% if topic %}
+            <table>
+                <thead>
+                    <th>Company Name</th>
+                    <th>Date Bought</th>
+                    <th>Share Price</th>
+                    <th>Shares Bought</th>
+                </thead>
+
+                {% for acc in topic %}
+                <tr>
+                    <td>{{ acc.company_name}}</td>
+                    <td>{{ acc.date_bought }}</td>
+                    <td>{{ acc.share_price }}</td>
+                    <td>{{ acc.shares_bought }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% else %}
+            <p>No Records Found!</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
