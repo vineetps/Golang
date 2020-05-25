@@ -21,11 +21,9 @@ def form_stock_market(request):
             share_price = form.cleaned_data['share_price']
             shares_bought = form.cleaned_data['shares_bought']
 
-            # form.save(commit=True)
-            # return index(request)
-            p = ShareDetails(company_name=company_name, date_bought=date_bought, share_price=share_price, shares_bought=shares_bought)
-            p.save()
-            return HttpResponseRedirect('/form')
+            model = ShareDetails(company_name=company_name, date_bought=date_bought, share_price=share_price, shares_bought=shares_bought)
+            model.save()
+            return HttpResponseRedirect('/')
         else:
             form = Form_Stock_Details()
     return render(request, 'first_app/form_stock_market.html', {'form': form})
