@@ -3,6 +3,10 @@
 
 `cd django && python first_project/manage.py runserver`
 
+home: `localhost:8000`
+
+form: `localhost:8000/form/`
+
 
 # Requirements
 Python:3
