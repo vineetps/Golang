@@ -18,9 +18,9 @@ from django.contrib import admin
 from django.conf.urls import include
 from first_app import views
 
+
 urlpatterns = [
-    url(r'^$', include('first_app.urls'), name='index'),
+    url(r'^$', views.index, name='index'),
     url(r'^form/', views.form_stock_market, name='form'),
-    # url(r'^first/', include('first_app.urls')),
     url(r'^admin/', admin.site.urls),
 ]
