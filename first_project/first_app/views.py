@@ -27,6 +27,3 @@ def form_stock_market(request):
         else:
             form = Form_Stock_Details()
     return render(request, 'first_app/form_stock_market.html', {'form': form})
-
-def portfolio(request):
-    return render(request, 'first_app/portfolio.html')
