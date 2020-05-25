@@ -1,5 +1,6 @@
 # How to run
 `git clone https://github.com/vineetps/django.git`
+
 `cd django && python first_project/manage.py runserver`
 
 
