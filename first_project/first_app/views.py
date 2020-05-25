@@ -16,13 +16,7 @@ def form_stock_market(request):
         form = Form_Stock_Details(request.POST)
         
         if form.is_valid():
-            company_name = form.cleaned_data['company_name']
-            date_bought = form.cleaned_data['date_bought']
-            share_price = form.cleaned_data['share_price']
-            shares_bought = form.cleaned_data['shares_bought']
-
-            model = ShareDetails(company_name=company_name, date_bought=date_bought, share_price=share_price, shares_bought=shares_bought)
-            model.save()
+            form.save(commit=True)
             return HttpResponseRedirect('/')
         else:
             form = Form_Stock_Details()
