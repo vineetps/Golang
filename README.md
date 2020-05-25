@@ -6,5 +6,7 @@
 
 # Requirements
 Python:3
+
 Django:1.11.29
+
 `python first_project/manage.py --version`
