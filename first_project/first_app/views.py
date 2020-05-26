@@ -13,6 +13,7 @@ def portfolio(request):
     topic_dict = {'topic': web_page}
     return render(request, 'first_app/portfolio.html', context=topic_dict)
 
+
 def form_stock_market(request):
     form = Form_Stock_Details()
     if request.method == 'POST':
