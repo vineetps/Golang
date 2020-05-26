@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.conf.urls import include
 from first_app import views
 
+app_name = 'django'
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.home, name='home'),
+    url(r'^portfolio/', views.portfolio, name='portfolio'),
     url(r'^form/', views.form_stock_market, name='form'),
     url(r'^admin/', admin.site.urls),
 ]

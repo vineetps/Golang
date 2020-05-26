@@ -11,8 +11,9 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="navbar-nav">
-        <a class="navbar-brand" href="{% url 'index' %}">Share Bazaar</a>
-        <a class="nav-item nav-link" href="{% url 'index' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Share Bazaar</a>
+        <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+        <a class="nav-item nav-link" href="{% url 'portfolio' %}">Portfolio</a>
         <a class="nav-item nav-link" href="{% url 'form' %}">Form</a>
         <a class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
       </div>

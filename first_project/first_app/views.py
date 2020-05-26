@@ -5,10 +5,13 @@ from .forms import Form_Stock_Details
 # Create your views here.
 
 
-def index(request):
+def home(request):
+    return render(request, 'first_app/home.html')
+
+def portfolio(request):
     web_page = ShareDetails.objects.order_by('company_name')
     topic_dict = {'topic': web_page}
-    return render(request, 'first_app/index.html', context=topic_dict)
+    return render(request, 'first_app/portfolio.html', context=topic_dict)
 
 def form_stock_market(request):
     form = Form_Stock_Details()
