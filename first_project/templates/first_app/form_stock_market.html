@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 {% extends "first_app/base.html" %}
-    {% block body_block %}
-    {% load staticfiles %}
-        <div class="container">
+{% block body_block %}
+{% load static %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Details of bought shares</h1>
             <form method="post">
                 {{ form.as_p }}
                 {% csrf_token %}
                 <input type="submit" value="Submit"/>
-              </form>
+            </form>
         </div>
-    {% endblock %}
+    </div>
+{% endblock %}

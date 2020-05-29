@@ -22,6 +22,8 @@ app_name = 'django'
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^accounts/login/', views.user_login, name='login'),
+    url(r'^logout/', views.user_logout, name='logout'),
     url(r'^portfolio/', views.portfolio, name='portfolio'),
     url(r'^form/', views.form_stock_market, name='form'),
     url(r'^admin/', admin.site.urls),

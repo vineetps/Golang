@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 {% extends "first_app/base.html" %}
     {% block body_block %}
-    {% load staticfiles %}
-        <div class="container">
+    {% load static %}
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Portfolio</h1>
             {% if topic %}
             <table>
                 <thead>
@@ -25,4 +27,5 @@
             <p>No Records Found!</p>
             {% endif %}
         </div>
+      </div>  
     {% endblock %}

@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.admin.widgets import AdminDateWidget
 import datetime
+from django.contrib.auth.models import User
 from .models import ShareDetails
 
 class Form_Stock_Details(forms.ModelForm):
@@ -12,3 +13,11 @@ class Form_Stock_Details(forms.ModelForm):
     class Meta:
         model = ShareDetails
         fields = ['company_name','date_bought','share_price','shares_bought']
+
+class UserForm(forms.ModelForm):
+    username = forms.CharField(required=True,label='Username')
+    password = forms.CharField(widget=forms.PasswordInput())
+
+    class Meta:
+        model = User
+        fields = ['username','password']
