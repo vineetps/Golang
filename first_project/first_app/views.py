@@ -1,3 +1,4 @@
+import importlib
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -23,7 +24,7 @@ def form_stock_market(request):
         
         if form.is_valid():
             form.save(commit=True)
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/portfolio/')
         else:
             form = Form_Stock_Details()
     return render(request, 'first_app/form_stock_market.html', {'form': form})
