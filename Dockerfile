@@ -8,4 +8,4 @@ WORKDIR /django
 RUN cat requirements.txt && pip install -r requirements.txt
 
 EXPOSE 8000
-CMD ["python", "first_project/manage.py", "runserver"]
+CMD ["python", "first_project/manage.py", "runserver", "8000"]
